@@ -10,14 +10,13 @@ html {
     color: #424242;
 }
 
-
-header{
+header {
     font-size: 4em;
     height: 2em;
     text-align: center;
     font-size: 400;
-
 }
+
 .contenedor-principal {
     height: 90vh;
     width: 100%;
@@ -40,17 +39,23 @@ header{
     align-items: center;
 }
 
+.resultado {
+    font-size: 3em;
+}
+
 .tablero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.mano-usuarix, .mano-pc{
+
+.mano-usuarix, .mano-pc {
     height: 100%;
 }
-.resultado {
-    font-size: 3em;
+
+.jugando .manos img {
+    animation: shake 2s ease;
 }
 
 .botones {
@@ -86,23 +91,16 @@ header{
     justify-content: center;
 }
 
-.jugando .manos img {
-    animation: shake 2s ease;
-}
-
 @media screen and (max-width:600px) {
-
-    header{
-        font-size: 3em;
+    header {
+        font-size: 2em;
         margin-top: 10%;
     }
-
-    .contenedor-principal{
+    .contenedor-principal {
         height: 75vh;
     }
     .contenedor-jugadores {
         padding-bottom: 10%;
-       
     }
     .resultado {
         font-size: 2em;
@@ -110,7 +108,6 @@ header{
     .mano-usuarix, .mano-pc {
         height: 12em;
     }
-   
     .botones {
         width: 100%;
     }
@@ -120,14 +117,11 @@ header{
     }
 }
 
-
-@media screen and (min-width:602px)
-{
-.botones{
-    width: 0;
-    min-width: 768px;
-}
-
+@media screen and (min-width:602px) {
+    .botones {
+        width: 0;
+        min-width: 768px;
+    }
 }
 
 @keyframes shake {
