@@ -8,12 +8,18 @@
 html {
     font-family: 'Montserrat';
     color: #424242;
- 
-   
 }
 
+
+header{
+    font-size: 4em;
+    height: 2em;
+    text-align: center;
+    font-size: 400;
+
+}
 .contenedor-principal {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -34,21 +40,39 @@ html {
     align-items: center;
 }
 
-
-.botones{
-    width: 75%;
+.tablero {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mano-usuarix, .mano-pc{
+    height: 100%;
+}
+.resultado {
+    font-size: 3em;
 }
 
-.boton{
-    width: 12em;
-height: 12em;
-    background-color: #fafafa;
-    border: 5px solid #ffcf24;
-    border-radius: 100px;
+.botones {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
 
-   
+.botones button:hover {
+    background-color: #ffcf24;
+}
+
+.botones button:focus {
+    outline: 0;
+}
+
+.boton {
+    width: 12em;
+    height: 12em;
+    border: 10px solid #ffcf24;
+    border-radius: 100px;
 }
 
 .boton img {
@@ -56,9 +80,82 @@ height: 12em;
     height: 60%;
 }
 
-.tablero {
+.manos {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+
+.jugando .manos img {
+    animation: shake 2s ease;
+}
+
+@media screen and (max-width:600px) {
+
+    header{
+        font-size: 3em;
+        margin-top: 10%;
+    }
+
+    .contenedor-principal{
+        height: 75vh;
+    }
+    .contenedor-jugadores {
+        padding-bottom: 10%;
+       
+    }
+    .resultado {
+        font-size: 2em;
+    }
+    .mano-usuarix, .mano-pc {
+        height: 12em;
+    }
+   
+    .botones {
+        width: 100%;
+    }
+    .boton {
+        height: 8em;
+        width: 8em;
+    }
+}
+
+
+@media screen and (min-width:602px)
+{
+.botones{
+    width: 0;
+    min-width: 768px;
+}
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0px);
+    }
+    15% {
+        transform: translateY(-25px);
+    }
+    25% {
+        transform: translateY(0px);
+    }
+    35% {
+        transform: translateY(-25px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    65% {
+        transform: translateY(-25px);
+    }
+    75% {
+        transform: translateY(0px);
+    }
+    85% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
